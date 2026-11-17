@@ -3,15 +3,9 @@ class Solution:
         n1=len(word1)
         n2=len(word2)
         merge=[]
-        i=0
-
-        while i<n1 and i<n2:
-            merge.append(word1[i])
-            merge.append(word2[i])
-            i=i+1
-        if n1<n2:
-            merge.append(word2[i:n2:1])
-        else :
-            merge.append(word1[i:n1])
-        merge="".join(merge)
-        return merge
+        for i in range(max(n1,n2)):
+            if i<n1:
+                merge.append(word1[i])
+            if i<n2:
+                merge.append(word2[i])
+        return "".join(merge)
