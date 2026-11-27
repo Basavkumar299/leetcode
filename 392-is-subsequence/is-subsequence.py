@@ -1,7 +1,5 @@
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
-        s=list(s)
-        t=list(t)
         i=0
         j=0
         n=len(s)
